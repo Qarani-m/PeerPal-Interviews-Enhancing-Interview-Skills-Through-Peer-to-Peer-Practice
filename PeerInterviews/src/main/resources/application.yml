@@ -1,0 +1,48 @@
+# Common configuration
+server:
+  port: 8090
+
+
+
+spring:
+  profiles:
+    active: dev
+
+
+---
+# Dev profile
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+spring:
+  security:
+    user:
+      name: martin
+      password: martin
+      roles: ADMIN
+  config:
+    activate:
+      on-profile: dev
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: PeerInterviewDev
+
+---
+# Production profile
+logging:
+  lev96a51870-ff1c-4639-98b2-92aedbfa94bfel:
+    org:
+      springframework:
+        security: DEBUG
+spring:
+  config:
+    activate:
+      on-profile: production
+  data:
+    mongodb:
+      uri: mongodb+srv://emqarani:Newsurtur17@cluster0.qddeiru.mongodb.net/PeerInterview
+      database: PeerInterviewProduction

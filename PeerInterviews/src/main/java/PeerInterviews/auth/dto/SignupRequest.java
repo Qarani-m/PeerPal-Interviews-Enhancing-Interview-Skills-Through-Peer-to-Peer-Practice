@@ -1,21 +1,15 @@
-package PeerInterviews.entity;
+package PeerInterviews.auth.dto;
 
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.*;
+
 import java.util.List;
 
-
-
-@Document(collection = "user_profiles")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserProfile {
-    @Id
-    private String id;
+@Builder
+@ToString
+public class SignupRequest {
     private String fullName;
     private String email;
     private String username;
@@ -36,5 +30,7 @@ public class UserProfile {
     private String preferredInterviewTime;
     private String profilePictureUrl;
     private String bio;
-
+    private String password;
 }
+
+

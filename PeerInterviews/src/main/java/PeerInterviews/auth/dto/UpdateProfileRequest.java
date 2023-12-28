@@ -1,4 +1,4 @@
-package PeerInterviews.dto;
+package PeerInterviews.auth.dto;
 
 public class UpdateProfileRequest {
     private String username;
