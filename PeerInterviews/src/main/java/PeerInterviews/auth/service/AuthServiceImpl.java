@@ -71,7 +71,8 @@ public class AuthServiceImpl implements AuthService{
                 .preferredInterviewTime(req.getPreferredInterviewTime())
                 .profilePictureUrl(req.getProfilePictureUrl())
                 .bio(req.getBio())
-                .password(passwordEncoder.encode(req.getPassword())) // Use password encoder
+                .password(passwordEncoder.encode(req.getPassword()))
+                .role(UserProfile.Role.USER)
                 .build();
     }
     private Optional<String> validateSignupRequest(SignupRequest req) {

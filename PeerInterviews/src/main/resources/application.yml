@@ -34,7 +34,7 @@ spring:
 ---
 # Production profile
 logging:
-  lev96a51870-ff1c-4639-98b2-92aedbfa94bfel:
+  level:
     org:
       springframework:
         security: DEBUG
